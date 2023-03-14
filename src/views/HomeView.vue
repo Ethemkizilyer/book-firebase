@@ -12,18 +12,18 @@
   </thead>
   <tbody>
     <tr>
-      <td><input type="text" v-model="eren.name"></td>
-      <td><input type="text" v-model="eren.author"></td>
-      <td><input type="text" v-model="eren.pageCount"></td>
-      <td><button @click="ethm">⌨</button></td>
+      <td><input class="is-size-5" type="text" v-model="eren.name"></td>
+      <td><input class="is-size-5" type="text" v-model="eren.author"></td>
+      <td><input class="is-size-5" type="text" v-model="eren.pageCount"></td>
+      <td><button class="is-size-4" @click="ethm">⌨</button></td>
     </tr>
     <tr  v-for="item in state.items" :key="item.id">
       <td  class="is-size-4 has-text-weight-bold">{{ item.name }}</td>
       <td class="is-size-5 has-text-weight-normal">{{ item.author }}</td>
       <td>{{ item.pageCount }}</td>
-      <td>
-        <button @click="nam(id=item.id,s='delete')">❌</button>
-        <button @click="nam(item.id,s='update')">🛠</button>
+      <td style="text-align: center;padding-top: 0.7rem;">
+        <button class="is-size-4" style="margin-right: 10px;" @click="nam(id=item.id,s='delete')">❌</button>
+        <button class="is-size-4" @click="nam(item.id,s='update')">🛠</button>
       </td>
      
     </tr>
@@ -78,6 +78,7 @@ const ethm=()=>{
       pageCount:eren.value.pageCount
       })
       fetchData()
+      eren.value= {name:"",author:"",pageCount:""}
 }
 
     const nami = ref(false)
