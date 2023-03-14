@@ -1,6 +1,6 @@
 <template>
 <div class="content mx-5">
-  <router-link to="/home">Firebase</router-link>
+  <router-link class="button is-danger" to="/home">Firebase</router-link>
 <h1>Todo App</h1>
 <form @submit.prevent="addTodo">
   <div class="field">
